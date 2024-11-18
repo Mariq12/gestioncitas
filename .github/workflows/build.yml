@@ -31,6 +31,9 @@ jobs:
       # Instalar dependencias del proyecto Flutter
       - name: Install dependencies
         run: flutter pub get
+      - run: flutter analyze .
+      # Run widget tests for our flutter project.
+      - run: flutter test
 
       # Construir el APK para Android
       - name: Build APK
